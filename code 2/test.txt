@@ -1,11 +1,23 @@
-Sun offers processing by the hour
+Not everything that has a beginning has an end. Not every Bollywood movie that has been started by a director hits the theatre. There are movies that haven’t been completed despite the Khans and Dutts of Bollywood being a part of it.
 
-Sun Microsystems has launched a pay-as-you-go service which will allow customers requiring huge computing power to rent it by the hour.
+And much to our surprise, one of those unreleased movies of Bollywood is a Salman Khan and Sanjay Dutt starrer – DUS.
 
-Sun Grid costs users $1 (53p) for an hour's worth of processing and storage power on systems maintained by Sun. So-called grid computing is the latest buzz phrase in a company which believes that computing capacity is as important a commodity as hardware and software. Sun likened grid computing to the development of electricity.
+Back in 1997, Salman Khan, Sanjay Dutt and Raveena Tandon were shooting a film named ‘Dus’ which unfortunately couldn’t be completed because of the sudden demise of its director, Mukul Anand.
 
-The system could mature in the same way utilities such as electricity and water have developed, said Sun's chief operating officer Jonathan Schwartz. "Why build your own grid when you can use ours for a buck an hour?" he asked in a webcast launching Sun's quarterly Network Computing event in California. The company will have to persuade data centre managers to adopt a new model but it said it already had interest from customers in the oil, gas and financial services industries.
+dus_poster
+Source
+‘Dus’ was Mukul Anand’s dream project and its story was based on terrorism. It is when they were shooting for this film in Utah, that he suffered a heart attack and the project got dismissed. The film was almost 40% complete and had even released one of its song that gained much popularity for its music. Being a patriotic song, it’s remembered even today for its brilliant music by Shankar Ehsaan Loy and unforgettable lyrics.
 
-Some of them want to book computing capacity of more than 5,000 processors each, Sun said. Mr Schwartz ran a demonstration of the service, showing how data could be processed in a protein folding experiment. Hundreds of servers were used simultaneously, working on the problem for a few seconds each.
+Had this film been released, it’d have marked the debut of the super talented music directors Shankar Ehsaan Loy. Have a look:
 
-Although it only took a few seconds, the experiment cost $12 (£6.30) because it had used up 12 hours' worth of computing power. The Sun Grid relies on Solaris, the operating system owned by Sun. Initially it will house the grid in existing premises and will use idle servers to test software before shipping it to customers. It has not said how much the system will cost to develop but it already has a rival in IBM, which argues that its capacity on-demand service is cheaper than that offered by Sun.
+
+SUBSCRIBE TO OUR YOUTUBE CHANNEL :
+
+While Salman Khan and Sanjay Dutt were to play army officers in the movie, Raveena Tandon was to be seen in a negative role. The story was about these two officers invading Pakistan in order to prevent fourth Indo-Pak war.
+
+There was another song from the movie sung by Sukhwinder that was released back then.
+
+
+SUBSCRIBE TO OUR YOUTUBE CHANNEL :
+
+If only the movie was released, we’re sure it’d have been a big hit at the box office, considering Salman was in his hay days back then. Anyway, maybe there’s someone who’d be willing to finish this one because if something doesn’t have an ending, it’s not really an end.

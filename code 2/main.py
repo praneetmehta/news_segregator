@@ -4,7 +4,7 @@ Created on Fri Mar  3 03:45:45 2017
 
 @author: praneet
 """
-from __future__ import division, print_function
+from __future__ import division
 from sklearn.feature_extraction.text import  TfidfVectorizer
 import reader as rd
 import re
@@ -13,7 +13,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from collections import Counter
 import lemmatizer as lm
-from tqdm import tqdm
+import pickle
 
 #%%
 def correct(s):
@@ -36,19 +36,20 @@ def assign():
     assignment = []
     possible = []
     true_count = 0
-    for i in tqdm(categories):        
+    for i in categories:        
         test_text = rd.filereader([i],'../train/')
         test_text = pd.Series([correct(test) for test in test_text])
         val = [kmeans.predict(a)[0] for a in vectorizer.transform(test_text)]
         count = Counter(val)
-        print(count)
+        print(count.most_common(3))
         if count.most_common(1)[0][0] in possible:
             assignment.append((count.most_common(2)[1][0],i))
             true_count += count.most_common(2)[1][1]
+            possible.append(count.most_common(2)[1][0])
         else:
             assignment.append((count.most_common(1)[0][0],i))  
             true_count += count.most_common(1)[0][1]
-        possible.append(count.most_common(1)[0][1])
+            possible.append(count.most_common(1)[0][0])
     accuracy = float(((true_count)/shape)*100)
     return dict(assignment), accuracy, true_count
      
@@ -62,11 +63,14 @@ categories = ['business','entertainment','politics','sport','tech']
 text = pd.Series(rd.filereader(categories, '../train/'))
 shape = text.shape[0]
 text = [correct(t) for t in text]
-text = lm.wordtokenize(text)
+#text = lm.wordtokenize(text)
 vectorizer = TfidfVectorizer(stop_words='english', encoding='iso-8859-1', ngram_range=(1,2))
 text_vector = vectorizer.fit_transform(text)
 kmeans = KMeans(n_clusters=5)
 kmeans.fit(text_vector)
 assignment = []
-assignment, error = assign()
+assignment, accuracy, true_count = assign()
 print (assignment)
+
+#%%
+pickle.dump([vectorizer,assignment,kmeans], open('../pickel/newssort', 'wb'))

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Sort</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+  <!-- Compiled and minified JavaScript -->
+  
+  </head>
+  <body>
+  <div class="row">
+  <% for(var i=0;i < news.length;i++){ %>
+      
+      	<div class="col s12 m3 l3">
+      		
+<div class="card sticky-action" style="">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="/images/<%= news[i].Category%>.png" >
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4" style="font-family: Roboto"><%= news[i].Heading%><i class="material-icons right">more_vert</i></span>
+                <p style="background: grey;display: inline-block;color: white;padding: 4px; font-family: Roboto">#<%=news[i].Category%></p>
+
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4" style="font-family: Roboto;font-size: 35px;margin-bottom: 30px"><%= news[i].Heading%><i class="material-icons right">close</i></span>
+      <p  style="font-family: Roboto;line-height: 180%"><%= news[i].Story%></p>
+    </div>
+    <div class="card-action">
+          <p><a href=<%= news[i].Link%> target="_blank" style="font-family: Roboto">Read More</a></p>
+
+     </div>
+  
+</div> 
+      	</div>
+      
+   <%}%>
+   </div> 
+     <style type="text/css">
+     	.main {
+  width: 450px;
+  margin: 30px;
+}
+     </style>
+          
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  </body>
+</html>
