@@ -74,9 +74,5 @@ for link in tqdm(links):
                                                 }
                                           }, upsert=False)
     except:
-        print 'error'
-    if count%10 == 0:
-        sleep(1)
-    else:
         sleep(1)
     
