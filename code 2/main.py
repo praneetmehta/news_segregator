@@ -5,7 +5,7 @@ Created on Fri Mar  3 03:45:45 2017
 @author: praneet
 """
 from __future__ import division
-from sklearn.feature_extraction.text import  TfidfVectorizer
+from sklearn.feature_extraction.text import  TfidfVectorizer, CountVectorizer
 import reader as rd
 import re
 from sklearn.cluster import KMeans
@@ -32,11 +32,11 @@ def plot(name):
     plt.scatter(x,y)
 
 #%%
-def assign():   
+def assign():
     assignment = []
     possible = []
     true_count = 0
-    for i in categories:        
+    for i in categories:
         test_text = rd.filereader([i],'../train/')
         test_text = pd.Series([correct(test) for test in test_text])
         val = [kmeans.predict(a)[0] for a in vectorizer.transform(test_text)]
@@ -47,17 +47,17 @@ def assign():
             true_count += count.most_common(2)[1][1]
             possible.append(count.most_common(2)[1][0])
         else:
-            assignment.append((count.most_common(1)[0][0],i))  
+            assignment.append((count.most_common(1)[0][0],i))
             true_count += count.most_common(1)[0][1]
             possible.append(count.most_common(1)[0][0])
     accuracy = float(((true_count)/shape)*100)
     return dict(assignment), accuracy, true_count
-     
+
 #%%
 def predict():
         text = open('./test.txt','r').read()
-        return assignment[kmeans.predict(vectorizer.transform([correct(text)]))[0]] 
-         
+        return assignment[kmeans.predict(vectorizer.transform([correct(text)]))[0]]
+
 #%%
 categories = ['business','entertainment','politics','sport','tech']
 text = pd.Series(rd.filereader(categories, '../train/'))
