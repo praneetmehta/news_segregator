@@ -7,6 +7,7 @@ var userSchema = new Schema({
   Category: String,
   Heading: String,
   Story: String,
+  Page: Number,
   Link: {type:String, unique:true}
 },{
   collection: 'BBC'

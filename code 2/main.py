@@ -15,12 +15,12 @@ from collections import Counter
 import lemmatizer as lm
 import pickle
 
-#%%
+#%% TODO: text preprocessing
 def correct(s):
-        s = re.sub('\s\W',' ',s)
-        s = re.sub('\W\s',' ',s)
-        s = re.sub("[^a-zA-Z']",' ', s)
-        s = re.sub('\s+',' ',s)
+        s = re.sub('\s\W', ' ', s)
+        s = re.sub('\W\s', ' ', s)
+        s = re.sub("[^a-zA-Z']", ' ',  s)
+        s = re.sub('\s+', ' ', s)
         return s
 #meandistortions.append(sum(np.min(cdist(text_vector, kmeans.cluster_centers_, 'euclidean'), axis=1))/text_vector.shape[0])
 #%%
